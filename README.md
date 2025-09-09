@@ -17,4 +17,4 @@ This project was built to practice frontend development skills and demonstrate r
 ## Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/azoom.git
+   https://github.com/sandy510-git/AZoom-for-Car-Rental-Service.git
