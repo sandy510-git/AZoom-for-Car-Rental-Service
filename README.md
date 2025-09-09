@@ -1,7 +1,7 @@
 # AZoom – Car Rental Service
 
 AZoom is a web application for booking and managing car rentals.  
-It allows customers to browse available cars, make reservations, and manage bookings online.  
+By running main.html file, it allows customers to browse available cars, make reservations, and manage bookings online.  
 This project was built to practice frontend development skills and demonstrate real-world web app functionality.
 
 ## Features
