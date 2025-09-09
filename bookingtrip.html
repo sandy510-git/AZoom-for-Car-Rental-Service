@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="popup.css">
+    <title>Book Your Trip</title>
+    <script>
+        function loadcreditcardPage() {
+            window.location.href = "http://127.0.0.1:5501/creditcard.html?";
+        }
+    </script>
+</head>
+
+<body>
+
+    <section class="booking">
+        <h1 class="heading-title"> Rent your car!</h1><br>
+        <form class="book-form">
+            <div class="flex">
+                <div class="inputBox">
+                    <span>Credit Card Number :</span>
+                    <input type="text" placeholder="Enter your credit card number" name="phone">
+                </div>
+                <div class="inputBox">
+                    <span>Car Model :</span>
+                    <input type="text" id="carmodel" placeholder="Enter ride here" name="cartype">
+                </div>
+                <div class="inputBox">
+                    <span>Choose pick-up location :</span>
+                    <div>
+                        <select id="car-type">
+                            <option value="compact">AZoom car rental office Jurong East</option>
+                            <option value="sedan">AZoom car rental office Raffle City</option>
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="inputBox">
+                    <span>Return Location</span>
+                   
+                    <input type="text" placeholder="Return car at designed car park" name="return">
+                </div>
+                <div class="inputBox">
+                    <span>Pick-up Date :</span>
+                    <input type="date" placeholder="date" name="pick-up">
+                </div>
+                <div class="inputBox">
+                    <span>Return Date :</span>
+                    <input type="date" placeholder="date" name="return">
+                </div>
+            </div>
+        </form>
+         <button id="sub-btn" onclick = "showpopup();">Submit</button>
+    </section>
+    <script src="main.js" defer> </script>
+
+ <!--------------------- POP UP Box------------------------->
+
+    <div id="popupbox"> 
+        <div class="popup" id="popup">
+            <img src="tick.png" width="100" height="100" alt="tick image" >
+            <h2> Rent Successful !</h2>
+            <p> Your rent has been successfully completed. Thanks! </p>
+            <button type = "button" onclick="hidepopup();"> OK </button>
+        </div>
+    </div>
+
+<script >
+   
+
+    function showpopup() {
+        const popup = document.getElementById('popupbox');
+        popup.style.display = 'block';
+    }
+
+    function hidepopup() {
+        const popup = document.getElementById('popupbox');
+        popup.style.display = 'none';
+}
+</script>
+
+</body>
+
+</html>

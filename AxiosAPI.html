@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Axios Demo 1</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   
+    <style>
+        input {
+            padding: 10px;
+            width: 300px;
+        }
+    </style>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Axios Demo 1</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        input {
+            padding: 10px;
+            width: 300px;
+        }
+    </style>
+    <script>
+        const getResponse = async () => {
+
+            let url = document.getElementById('inputURL').value;
+            const response = await axios.get(url);
+            displayData(response.data);
+        }
+
+        const displayData = (data) => {
+            const demoList = document.getElementById('demo');
+            demoList.innerHTML = '';
+
+            for (let i = 0; i < data.length; i++) {
+                const listItem = document.createElement('li');
+                listItem.textContent = JSON.stringify(data[i]);
+                demoList.appendChild(listItem);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Axios HTTP API Demo 1</h1>
+
+    <input type="text" id="inputURL" value="https://jsonplaceholder.typicode.com/users">
+
+    <button onclick="getResponse()">Get Response</button>
+
+    <ol id="demo"></ol>
+</body>
+
+</html>
+

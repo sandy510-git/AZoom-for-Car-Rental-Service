@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bill.css">
+    <link rel="stylesheet" href="popup.css">
+    <title>Billing</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title"> Rental Fees </h3>
+                    <div class=" inputBox">
+                        <span> Car type : </span>
+                        <input type="text" placeholder="Please type car model">
+                    </div>
+
+                    <div class=" inputBox">
+                        <span> Numbers of Days : </span>
+                        <input type="number" placeholder="Please type the days">
+                    </div>
+                    
+                    <div class="radio"> 
+                        <span>Do you have any damages found?</span><br>
+                        <input type="radio" name="yes_no" >Yes</input> <br>
+                        <input type="radio" name="yes_no"checked>No</input>
+                    </div>
+                    
+                    <div class=" inputBox">
+                        <span> Rental Fee : </span>
+                        <input type="text" >
+                    </div>
+                    <div class=" inputBox">
+                        <span> Extra fees for damages : </span>
+                        <input type="text" >
+                    </div>
+
+                    <div class=" inputBox">
+                        <span> Total Amount : </span>
+                        <input type="text" >
+                    </div>
+                    </div>
+
+                </div>
+                <!-- <input type="submit" value="Proceed" class="submit-btn"> -->
+                </form>
+                <div class="center-button">
+                    <button class="styled-button" onclick="showpopup()">Submit</button>
+                  </div>
+               
+                <!--------------------- POP UP Box------------------------->
+
+            <div style = "display: none;" id="popupbox">
+            <div class="popup" id="popup">
+                <img src="tick.png" width="100" height="100" alt="tick image" >
+                <h2>Successful!</h2>
+                <p> Your payment has been successfully completed. Thanks! </p>
+                <button type = "button" onclick="hidepopup()"> OK </button>
+            </div>
+        </div>
+
+    <script >
+        function showpopup() {
+        const popup = document.getElementById('popupbox');
+        popup.style.display = 'block';
+    }
+
+    function hidepopup() {
+        const popup = document.getElementById('popupbox');
+        popup.style.display = 'none';
+}
+    </script>
+    
+
+       
+            </body>
+            </html>

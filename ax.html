@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Axios Demo 1</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   
+    <style>
+        input {
+            padding: 10px;
+            width: 300px;
+        }
+    </style>
+
+    <script>
+
+      const getResponse = async () => {
+
+    let url = document.getElementById('inputURL').value;
+    let response = await axios.get(url);
+    console.log('my response', respone);
+    let mydata = response.data;
+
+    console.log('my data>>',mydata);
+    let user1 = mydata[0];
+    console.log('user1:',mydata);
+
+
+
+    for ( let i=0; i <10; i++ ) {
+
+
+
+    }
+
+}
+
+    </script>
+
+
+</head>
+<body>
+    <h1>Axios HTTP API Demo 1</h1>
+
+    <input type="text" id="inputURL" value="https://jsonplaceholder.typicode.com/users">
+
+    <button onclick="getResponse()">Get Response</button>
+
+    <ol id="demo"></ol>
+
+</body>
+</html>
